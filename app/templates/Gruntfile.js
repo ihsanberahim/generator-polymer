@@ -246,8 +246,10 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           dot: true,
-          dest: '<%%= yeoman.dist %>',
-          src: ['bower_components/**']
+          dest: '<%= yeoman.dist %>',
+          src: [
+            'bower_components/{,*/}*.{html,js,css,png,jpg,jpeg,gif,webp,svg}'
+          ]
         }]
       },
       styles: {
